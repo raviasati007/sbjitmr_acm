@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,
+				initial-scale=1" />
+
+  <link rel="icon" href="img/ACM_LOGO.png" />
+  <title>ACM-SBJITMR</title>
+ 
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
+</head>
+<style>
+  
+    .carousel-item img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+    .carousel {
+      max-width: 1000px; /* set the maximum width of the carousel */
+      margin: auto;
+      /* background-color: red; */
+    }
+    .bxl-twitter:before {
+        content: "\e982";
+      }
+    .contact .info-box {
+        color: #444444;
+        text-align: center;
+        box-shadow: 0 0 30px rgba(214, 215, 216, 0.3);
+        padding: 20px 0 30px 0;
+      }
+      
+      .contact .info-box i {
+        font-size: 32px;
+        color: #106eea;
+        border-radius: 50%;
+        padding: 8px;
+        border: 2px dotted #b3d1fa;
+      }
+      
+      .contact .info-box h3 {
+        font-size: 20px;
+        color: #777777;
+        font-weight: 700;
+        margin: 10px 0;
+      }
+      
+      .contact .info-box p {
+        padding: 0;
+        line-height: 24px;
+        font-size: 14px;
+        margin-bottom: 0;
+      }
+      @keyframes animate-loading {
+        0% {
+          transform: rotate(0deg);
+        }
+      
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      
+      
+
+      /* image*/
+
+    #image-container {
+        position: relative;
+        display: inline-block;
+        border: 3px solid rgb(22, 97, 209);
+        padding: 5px;
+      }
+      #ci
+      {
+        width: 100%;
+        height:800px;
+      }
+      
+      #image-container img {
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: opacity 0.3s ease;
+      }
+      
+      #image-container:hover img {
+        opacity: 0.7;
+      }
+      
+      #image-container:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: opacity 0.3s ease;
+      }
+      
+      #image-container:hover:before {
+        opacity: 1;
+      }
+      
+   #service
+   {
+    background-image: url(img/hello.jpg);
+
+   }
+      
+    #para, #para1,#para3,#para4 {
+        overflow: hidden;
+        height: 145px;
+    }
+    
+     #readMoreBtn,#readMoreBtn1,#readMoreBtn2,#readMoreBtn3 {
+        background-color: blue;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+     }
+
+
+</style>
+
+<body>
+  <section id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="img/ACM_LOGO.png" class="nav-img" alt="" />
+          ACM-SBJITMR
+        </a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button> -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav m-auto">
+            <li class="nav-item">
+              <a class='nav-link active' href='/'>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class='smooth_scrool' href='#banner1' style="text-decoration: none; display: inline-block; padding: 9px 10px;">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class='nav-link' href='/'>Events</a>
+            </li>
+            <li class="nav-item">
+              <a class='nav-link' href='/'>Achievements</a>
+            </li>
+            <li class="nav-item">
+              <a class='smooth_scrool' href='#team' style="text-decoration: none; display: inline-block; padding: 9px 10px;">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:emergiconacm@sbjit.edu.in">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- banner -->
+
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 "
+          data-aos="fade-up" data-aos-delay="200">
+         <h3 style="color: rgb(255, 255, 255);">SBJITMR ACM Student Chapter
+          </h3>
+          <p style="color:rgb(255, 255, 255); text-align: justify; text-justify: inter-word; text-overflow: hidden;font-size: 16px !important;" >
+            The Association for Computing Machinery (ACM) stands as a global scholarly society dedicated to the field of 
+				    computing, with a rich history dating back to its establishment in 1947. 
+				    Recognized as the world's largest scientific and educational computing society, 
+				    ACM has played a pivotal role in shaping the landscape of computing. 
+				    In alignment with this prestigious legacy, 
+				    ACM-S.B. Jain was founded in 2023 by the Department of Emergicon at S. B. Jain Institute of Technolog, Management and Research. 
+				    Since 2023, it has been jointly managed by the departments of Emericon AIML-AIDS.
+				    ACM-S.B. Jain serves as a dynamic professional community, committed to fostering awareness of the latest technological 
+				    advancements and providing educational insights. With a focus on nurturing aspiring change-makers, the association
+				    organizes events centered around cutting-edge technologies, contributing to the holistic development of students.
+				    Join us on a journey of technological exploration and educational excellence!
+          </p>
+          
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img src="img/hero-img.png" class="img-fluid animated" alt="">
+        </div>
+      </div>
+    </div>
+
+<br>
+<br>
+
+  </section>
+  <!-- Banner2 -->
+  <section id="banner1">
+    <br>
+    <br>
+
+      <div class="row" id="banner-row">
+        <div class="col-md-12 	padding-left: 166px;">
+          <img
+            src="img/sbj-removebg-preview-1.png"
+            alt="" style="width: 210px; text-align: center; display: block; margin-left: auto; margin-right: auto;"/>
+          <h3> S.B Jain Institute of Technology, Management and Research</h3>
+
+          <p
+            style="text-align: justify;text-justify: inter-word;   margin-left: 24px;
+            padding-left: 25px; padding-right: 45px;  font-size: large !important; ">
+            S.B. Jain Institute of Technology, Management & Research (SBJITMR) is an initiative of Shri Shantilalji Badjate, who devoted his lifetime to the field of education. His dream to build a world class educational infrastructure led to the beginning of Sir Shantilal Badjate Charitable Trust,Nagpur.
+
+            The Institute is a self-financed, Hindi linguistic minority Institute affiliated to Rashtrasant Tukadoji Maharaj Nagpur University, Nagpur; approved by All India Council for Technical Education, New Delhi and Directorate of Technical Education, Maharashtra State. It is accredited with NAAC “A” Grade.
+            
+            Since its inception, SBJITMR has continuously seen a rise in popularity amongst the aspiring students and their parents. It has become a preferred destination of the students due to qualitytechnical education, matching infrastructure, robust teaching-learning practices as well as holisticgrowth and good employability. The Institute has a dedicated team of highly qualified and experienced faculty Members.
+            The Institute has been conferred with Autonomous Status by the University Grants Commission (UGC), New Delhi and Rashtrasant Tukadoji Maharaj Nagpur University (RTMNU) from Academic Session 2020-21 onwards. Autonomy is a functional status given to the colleges by the University Grants Commission and the affiliated University. Autonomy provides the most flexibility towards academic development for the uplift of academic standards and excellence.
+            
+            
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br> 
+
+  <!-- services -->
+  <section id="service">
+    <h1 id="head" class="text-left"> &emsp; From HOD's Desk</h1>
+    <div class="container-fluid" id="service-container">
+      <div class="row" id="banner-row">
+        <div class="col-md-12 px-5" id="service-col2">
+          <img id="image-container" src="img/Hod Sir.jpg" class="img-fluid rounded mx-auto d-block i1" alt="..." width="390px"
+            style="border-radius: 3% !important; padding: 0px !important;" />
+          <h3>Dr. Hemant Turkar</h3>
+          <p id="para" style="text-align: justify;"> 
+          Welcome to the SBJITMR Student Chapter of the Association for Computing Machinery (ACM)! 
+          I am pleased to welcome you all to the Department Of Emerging Technologies and I extend 
+          my warmest greetings to you all. True to our name, we represent the cutting edge of the 21st century. 
+          With specialized branches of CSE in Artificial Intelligence and  Machine Learning & Data Science, 
+          we are dedicated to continually enhancing the skill sets of our students. 
+          Through carefully designed programs and practical experiences, we ensure that our students are well-prepared 
+          to excel in their prospective professional journeys. At our department, we strive to integrate quality education 
+          with a focus on upcoming technologies, essential for placing competent students in the IT industry. Providing 
+          guidance and support, we aim to shape our students for success. But when we talk about education it also comprises 
+          extracurricular activities so, beyond academics, we recognized the importance of extracurricular activities in 
+          building confidence and preparing students for a bright future. 
+          Our department hosts frequent events such as “ACM-ICPC and Smart India Hackathon” that contribute to our integrated development 
+          program. In conclusion, we also focus on nurturing students socially. 
+          I emphasize my role in transforming students into both technically and socially competent individuals,
+           ready to open doors to success and a promising future. I invite all of you to collaborate with us in shaping tomorrow's world with 
+           today's youth. They will lead us to technological advancements to the greatest extent.      
+          </p>
+          
+          <button onclick="readMore()" id="readMoreBtn">Read More</button>
+        <br>
+        </br>
+        </div>
+        
+
+        <h1 id="head"  class="text-center"> Faculty Co-ordinator's Desk</h1>
+
+        <div class="col-md-6 px-5" id="service-col2">
+          <br>
+          <img id="image-container" src="public/image/supriyamam.jpg" class="img-fluid rounded mx-auto d-block i1" alt="..." width="210px"
+            style="border-radius: 10% !important; padding: 0px !important;" />
+          <h3>------</h3>
+          <p id="para3" style="text-align: justify;"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur voluptas perspiciatis fuga ducimus perferendis saepe vero. Quaerat, culpa atque magnam repellat maxime corrupti numquam? Aliquid consectetur fugiat repellendus mollitia nesciunt blanditiis soluta accusamus voluptatum, impedit corporis dignissimos earum labore at sequi? Rem nulla architecto ipsam accusantium porro consequatur, perferendis placeat?
+            </p>
+            <button onclick="readMore2()" id="readMoreBtn1">Read More</button>
+        </div>
+       
+        <div class="col-md-6 px-5" id="service-col1">
+          <br>
+          <img id="image-container" src="public/image/Pratibhamam.jpg" class="img-fluid rounded mx-auto d-block i1" alt="..." width="210px"
+            style="border-radius: 10% !important; padding: 0px !important;" />
+          <h3>--------</h3>
+          <p id="para4" style="text-align: justify;"> 
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero necessitatibus omnis rem eaque earum. Porro nesciunt molestias numquam voluptatum voluptates veritatis accusamus quod, magnam alias, obcaecati sequi dicta cumque. Laboriosam at placeat doloremque. Quia numquam itaque repellendus libero error rem consequuntur harum debitis eaque magnam adipisci accusamus enim, obcaecati sapiente?            </p>
+            <button onclick="readMore3()" id="readMoreBtn1">Read More</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- Team -->
+  
+	<section class="team" id="team">
+		<div class="center">
+			<h1 style="color: black;">ACM SBJITMR CORE TEAM</h1>
+		</div>
+
+		<div class="team-content">
+			<div class="box">
+				<img src="img/01.png">
+				<h3>-----</h3>
+				<h5 style="color: white;">Chairperson</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-linkedin-fill"></i></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="img/01.png">
+				<h3>----</h3>
+				<h5 style="color: white;">Vice-Chairperson</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-linkedin-fill"></i></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="img/01.png">
+				<h3>-----</h3>
+				<h5 style="color: white;">Treasurer</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-linkedin-fill"></i></a>
+				</div>
+			</div>
+
+			<div class="box">
+				<img src="img/01.png">
+				<h3>-----</h3>
+				<h5 style="color: white;">Secretary</h5>
+				<div class="icons">
+					<a href="#"><i class="ri-twitter-fill"></i></a>
+					<a href="#"><i class="ri-linkedin-fill"></i></a>
+				</div>
+			</div>
+
+		</div>
+	</section>
+   <!-- <section id="product"> -->
+    
+    <div class="gallery">
+      <h3 class="myh1" style="text-align: center">
+        Photo <span class="myspan1">Gallery</span>
+      </h3>
+      <div class="container1" style="overflow-x: scroll; white-space: nowrap;">
+        <div class="box1" style="display: inline-block; padding: 30px;">
+          <img src="img/pic6.jpg" style="display: inline-block; width: 33.33%;" />
+          <img src="img/pic7.jpg" style="display: inline-block; width: 33.33%;" />
+          <img src="img/pic8.jpg" style="display: inline-block; width: 33.33%;" />
+          <img src="img/pic5.jpg" style="display: inline-block; width: 33.33%;" />
+          <img src="img/pic1.jpg" style="display: inline-block; width: 33.33%;" />
+          <img src="img/pic2.jpg" style="display: inline-block; width: 33.33%;" />
+          <img src="img/pic3.jpg" style="display: inline-block; width: 33.33%;" />
+        </div>
+      </div>
+    </div> 
+	</div>
+
+
+  <!-- footer -->
+  <section id="banner" style="color: white; background-color: #0b2147;">
+    <div class="container-fluid" id="banner-container">
+      <div class="row" id="banner-row">
+        <div class="col-md-4" id="footer-col1">
+      <h3>Location</h3>
+          <p>
+            S.B Jain Institute of Technology, Management and Research,
+            <br/>Yerla Village, Kalmeshwar Road, Nagpur- 441501<br />
+           State : Maharashtra<br />
+           Country : India
+          </p>
+        </div>
+        <div class="col-md-4" id="footer-col2">
+          <h3>Contact Us</h3>
+
+          <p>Email Us- emergiconacm@sbjit.edu.in </p>
+        </div>
+        <div class="col-md-4" id="footer-col2">
+          <h3>Design & Developed by</h3>
+
+          <p>Team ACM-SBJITMR</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+   
+  <script>
+    // Get the preloader element
+    var preloader = document.getElementById("preloader");
+    var sohail=0;
+    // Hide the preloader after a delay of 3 seconds, or when the website content has loaded
+    setTimeout(function(){
+        preloader.style.display = "none";
+        sohail=1;
+    }, 2000);
+
+    // Hide the preloader after the website content has loaded
+    if (sohail==1) {
+    window.addEventListener("load", function () {
+      preloader.style.display = "none";
+    });
+  }
+  function readMore() {
+    var para = document.getElementById("para");
+    var btn = document.getElementById("readMoreBtn");
+  
+    if (para.style.height === "145px") {
+      para.style.height = "auto";
+      btn.innerHTML = "Read Less";
+    } else {
+      para.style.height = "145px";
+      btn.innerHTML = "Read More";
+    }
+  }
+  function readMore1() {
+    var para = document.getElementById("para1");
+    var btn = document.getElementById("readMoreBtn1");
+  
+    if (para.style.height === "145px") {
+      para.style.height = "auto";
+      btn.innerHTML = "Read Less";
+    } else {
+      para.style.height = "145px";
+      btn.innerHTML = "Read More";
+    }
+  }
+  function readMore2() {
+    var para = document.getElementById("para3");
+    var btn = document.getElementById("readMoreBtn1");
+  
+    if (para.style.height === "145px") {
+      para.style.height = "auto";
+      btn.innerHTML = "Read Less";
+    } else {
+      para.style.height = "145px";
+      btn.innerHTML = "Read More";
+    }
+  }
+  function readMore3() {
+    var para = document.getElementById("para4");
+    var btn = document.getElementById("readMoreBtn1");
+  
+    if (para.style.height === "145px") {
+      para.style.height = "auto";
+      btn.innerHTML = "Read Less";
+    } else {
+      para.style.height = "145px";
+      btn.innerHTML = "Read More";
+    }
+  }
+  </script>
+  
+</body>
+
+</html>
