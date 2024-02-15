@@ -23,60 +23,6 @@
 </head>
 <style>
   
-    .carousel-item img {
-			height: 100%;
-			width: 100%;
-			object-fit: cover;
-			object-position: center;
-		}
-    .carousel {
-      max-width: 1000px; /* set the maximum width of the carousel */
-      margin: auto;
-      /* background-color: red; */
-    }
-    .bxl-twitter:before {
-        content: "\e982";
-      }
-    .contact .info-box {
-        color: #444444;
-        text-align: center;
-        box-shadow: 0 0 30px rgba(214, 215, 216, 0.3);
-        padding: 20px 0 30px 0;
-      }
-      
-      .contact .info-box i {
-        font-size: 32px;
-        color: #106eea;
-        border-radius: 50%;
-        padding: 8px;
-        border: 2px dotted #b3d1fa;
-      }
-      
-      .contact .info-box h3 {
-        font-size: 20px;
-        color: #777777;
-        font-weight: 700;
-        margin: 10px 0;
-      }
-      
-      .contact .info-box p {
-        padding: 0;
-        line-height: 24px;
-        font-size: 14px;
-        margin-bottom: 0;
-      }
-      @keyframes animate-loading {
-        0% {
-          transform: rotate(0deg);
-        }
-      
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-      
-      
-
       /* image*/
 
     #image-container {
@@ -144,41 +90,47 @@
 
 <body>
   <section id="navbar">
-    <nav class="navbar navbar-expand-lg navbar-dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="img/ACM_LOGO.png" class="nav-img" alt="" />
-          ACM-SBJITMR
-        </a>
-        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button> -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav m-auto">
-            <li class="nav-item">
-              <a class='nav-link active' href='/'>Home</a>
-            </li>
-            <li class="nav-item">
-              <a class='smooth_scrool' href='#banner1' style="text-decoration: none; display: inline-block; padding: 9px 10px;">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class='nav-link' href='/'>Events</a>
-            </li>
-            <li class="nav-item">
-              <a class='nav-link' href='/'>Achievements</a>
-            </li>
-            <li class="nav-item">
-              <a class='smooth_scrool' href='#team' style="text-decoration: none; display: inline-block; padding: 9px 10px;">Team</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="mailto:emergiconacm@sbjit.edu.in">Contact Us</a>
-            </li>
-          </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/ACM_LOGO.png" class="nav-img" alt="" />
+                ACM-SBJITMR
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item">
+                        <a class='nav-link active' href='/' style="text-decoration: none; display: inline-block; padding: 9px 10px;">Home </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='smooth_scrool' href='#banner1' style="text-decoration: none; display: inline-block; padding: 9px 10px;">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='nav-link' href='/' style="text-decoration: none; display: inline-block; padding: 9px 10px;">Events</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='nav-link' href='/' style="text-decoration: none; display: inline-block; padding: 9px 10px;">Achievements</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class='smooth_scrool' href='#team' style="text-decoration: none; display: inline-block; padding: 9px 9px;">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mailto:emergiconacm@sbjit.edu.in" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
-  </section>
+</section>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 
   <!-- banner -->
 
@@ -251,7 +203,7 @@
       <div class="row" id="banner-row">
         <div class="col-md-12 px-5" id="service-col2">
           <img id="image-container" src="img/Hod Sir.jpg" class="img-fluid rounded mx-auto d-block i1" alt="..." width="390px"
-            style="border-radius: 3% !important; padding: 0px !important;" />
+            style="border-radius: 2% !important; padding: 0px !important;" />
           <h3>Dr. Hemant Turkar</h3>
           <p id="para" style="text-align: justify;"> 
           Welcome to the SBJITMR Student Chapter of the Association for Computing Machinery (ACM)! 
@@ -314,42 +266,52 @@
 
 		<div class="team-content">
 			<div class="box">
-				<img src="img/01.png">
-				<h3>-----</h3>
+				<img src="Team/PP.jpg">
+				<h3>Pranav Pimpalkar</h3>
 				<h5 style="color: white;">Chairperson</h5>
 				<div class="icons">
-					<a href="#"><i class="ri-twitter-fill"></i></a>
-					<a href="#"><i class="ri-linkedin-fill"></i></a>
+					<a href="https://x.com/pranv_pimpalkar?t=B_Akv5cU4EnSf0Ka6bPfQQ&s=09" target="_blank"><i class="ri-twitter-fill"></i></a>
+					<a href="https://www.linkedin.com/in/pranav-pimpalkar-975389210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="ri-linkedin-fill"></i></a>
 				</div>
 			</div>
 
 			<div class="box">
-				<img src="img/01.png">
-				<h3>----</h3>
+				<img src="Team/Sh.jpg">
+				<h3>Srushti Hanwate</h3>
 				<h5 style="color: white;">Vice-Chairperson</h5>
 				<div class="icons">
-					<a href="#"><i class="ri-twitter-fill"></i></a>
-					<a href="#"><i class="ri-linkedin-fill"></i></a>
+					<a href="https://twitter.com/SrushtiHanwate?t=OsxXWk76eV_tFCbgMhqTYg&s=08" target="_blank"><i class="ri-twitter-fill"></i></a>
+					<a href="https://www.linkedin.com/in/srushti-h-2bb670242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"target="_blank"><i class="ri-linkedin-fill"></i></a>
 				</div>
 			</div>
 
 			<div class="box">
-				<img src="img/01.png">
-				<h3>-----</h3>
+				<img src="Team/Sm.jpg">
+				<h3>Sakshi Mantri</h3>
 				<h5 style="color: white;">Treasurer</h5>
 				<div class="icons">
-					<a href="#"><i class="ri-twitter-fill"></i></a>
-					<a href="#"><i class="ri-linkedin-fill"></i></a>
+					<a href="https://x.com/Sakshi_Mantri_?t=EBt5jXJsSAgdsaLdyEoDCA&s=09" target="_blank"><i class="ri-twitter-fill"></i></a>
+					<a href="https://www.linkedin.com/in/sakshi-mantri-74b5b6269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="ri-linkedin-fill"></i></a>
 				</div>
 			</div>
 
 			<div class="box">
-				<img src="img/01.png">
-				<h3>-----</h3>
+				<img src="Team/Pn.jpg">
+				<h3>Prathmesh Naik</h3>
 				<h5 style="color: white;">Secretary</h5>
 				<div class="icons">
-					<a href="#"><i class="ri-twitter-fill"></i></a>
-					<a href="#"><i class="ri-linkedin-fill"></i></a>
+					<a href="https://x.com/Prathme28636473?t=xd0NOJOMbb4r0H-LoH4scA&s=08"target="_blank"><i class="ri-twitter-fill"></i></a>
+					<a href="https://www.linkedin.com/in/prathmesh-naik-a48667249"target="_blank"><i class="ri-linkedin-fill"></i></a>
+				</div>
+			</div>
+
+      <div class="box">
+				<img src="Team/Sk.jpg">
+				<h3>Sharayu Kadu</h3>
+				<h5 style="color: white;">Membership Chair</h5>
+				<div class="icons">
+					<a href="https://x.com/SharayuKadu?t=ttgekLXkLA83qEBmxV0fHA&s=09" target="_blank"><i class="ri-twitter-fill"></i></a>
+					<a href="https://www.linkedin.com/in/sharayu-kadu-6a389523a" target="_blank"><i class="ri-linkedin-fill"></i></a>
 				</div>
 			</div>
 
@@ -357,7 +319,7 @@
 	</section>
    <!-- <section id="product"> -->
     
-    <div class="gallery">
+    <!-- <div class="gallery">
       <h3 class="myh1" style="text-align: center">
         Photo <span class="myspan1">Gallery</span>
       </h3>
@@ -373,7 +335,125 @@
         </div>
       </div>
     </div> 
-	</div>
+	</div> -->
+
+  <!-- Gallery -->
+  
+  <style>
+  
+  /* Slideshow container */
+  .slideshow-container {
+  max-width: 700px;
+  position: relative;
+  margin: auto;
+  overflow: hidden; 
+  border-radius: 15px; 
+  }
+  
+  
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 12s ease;
+  }
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .3} 
+    to {opacity: 20}
+  }
+  
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+  }
+  </style>
+
+  <div class="gallery">
+  <h3 class="myh1" style="text-align: center; font-weight: bold;" >
+    Photo <span class="myspan1">Gallery</span>
+  </h3>
+  <div class="slideshow-container">
+  
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/pic1.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/pic2.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+    <div class="numbertext"></div>
+    <img src="img/pic3.jpg" style="width:100%">
+  </div>
+  
+  <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="img/pic4.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="img/pic5.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="img/pic6.jpg" style="width:100%">
+    </div>
+  
+  </div>
+  <br>
+  
+  <div style="text-align:center">
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
+  </div>
+  
+  <script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 1900); // Change image every 2 seconds
+  }
+  </script>
+  
+  </body>
+  </html> 
+  
+  <!-- Gallery-END -->
 
 
   <!-- footer -->
