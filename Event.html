@@ -23,54 +23,15 @@
 </head>
 <style>
   
-  /* image*/
-
-#image-container {
-    position: relative;
-    display: inline-block;
-    border: 3px solid rgb(22, 97, 209);
-    padding: 5px;
-  }
-  #ci
-  {
-    width: 100%;
-    height:800px;
-  }
-  
-  #image-container img {
-    display: block;
-    width: 200%;
-    height: auto;
-    /* object-fit: cover; */
-    transition: opacity 0.3s ease;
-  }
-  
-  #image-container:hover img {
-    opacity: 0.7;
-  }
-  
-  #image-container:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    transition: opacity 0.3s ease;
-  }
-  
-  #image-container:hover:before {
-    opacity: 1;
-  }
-  
-#service
-{
-background-image: url(img/hello.jpg);
-
+ul {
+  list-style-type: none;
+  padding: 0;
 }
-  
+li {
+  font-size: 18px; 
+  margin-bottom: 10px; 
+  line-height: 1.5; 
+}
 
 </style>
 
@@ -78,8 +39,8 @@ background-image: url(img/hello.jpg);
   <section id="navbar">
     <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="img/ACM_LOGO.png"  class="nav-img" alt="" />
+            <a class="navbar-brand" href="/">
+                <img src="img/ACM_LOGO.png" href="/index.html" target="_parent" class="nav-img" alt="" />
                 ACM-SBJITMR
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -101,7 +62,7 @@ background-image: url(img/hello.jpg);
                         <a class='nav-link' href='/' style="text-decoration: none; display: inline-block; padding: 9px 10px;">Achievements</a>
                     </li>
                     <li class="nav-item">
-                        <a class='smooth_scrool' href='#team' style="text-decoration: none; display: inline-block; padding: 9px 9px;">Team</a>
+                        <a class='smooth_scrool' href='index.html' style="text-decoration: none; display: inline-block; padding: 9px 9px;">Team</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="mailto:emergiconacm@sbjit.edu.in" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Contact Us</a>
@@ -129,7 +90,7 @@ background-image: url(img/hello.jpg);
             <br>
             “AI and Machine Learning”
           </h3>
-          <p style="color:rgb(255, 255, 255); text-align: justify; text-justify: inter-word;font-size: 16px " >
+          <p style="color:rgb(255, 255, 255); text-align: justify; text-justify: inter-word; text-overflow: hidden;font-size: 16px !important;" >
             The AI and machine learning domain is a
 rapidly evolving field at the intersection of
 computer science, mathematics, and
@@ -184,16 +145,25 @@ curriculum.
     <br>
     <br>
 
-      <div class="row" id="banner-row">
-        <div class="col-md-12 	padding-left: 166px;">
-          <img
-            src="img/sbj-removebg-preview-1.png"
-            alt="" style="width: 210px; text-align: center; display: block; margin-left: auto; margin-right: auto;"/>
-          <h3> About Emergicon Department</h3>
+    <div class="row" id="banner-row">
+      <div class="col-md-12" style="text-align: center;">
+        <img src="img/sbj-removebg-preview-1.png" alt="" style="width: 210px; display: inline-block;padding-left: 10px;" />
+        <h3 style="margin-top: 10px;font-size: 30px;">About Department of Emerging Technologies</h3>
+      </div>
+    </div>
+    
+    
 
           <p
-            style="text-align: justify;text-justify: inter-word;   margin-left: 24px;
-            padding-left: 25px; padding-right: 45px;  font-size: large !important; ">
+          style="color: rgb(0, 0, 0); 
+          text-align: justify; 
+          text-justify: inter-word; 
+          text-overflow: hidden; 
+          font-size: 20px !important; 
+          width: 95%; /* Adjust the width as needed */ 
+          margin: 0 auto; /* This will center the element horizontally */ 
+          padding: 20px; /* Equal padding on all sides */ 
+          box-sizing: border-box; /* Includes padding in the total width */">
             Dedicated to its mission of delivering exceptional technical education and fostering the development of adept professionals, the Department of Emerging Technologies was established at the outset of the academic year 2021-22. At the heart of this initiative is a commitment to excellence, driven by a vision to prepare students for the ever-evolving landscape of technology. With state-of-the-art infrastructure at our disposal, we have created an environment conducive to learning, innovation, and skill development.
 
             Our department is led by a team of highly qualified and experienced faculty members who bring a wealth of knowledge and industry insights to the learning process. Through their guidance, mentorship, and hands-on approach to education, students are not only equipped with theoretical knowledge but are also immersed in practical applications, ensuring a holistic and comprehensive learning experience.
@@ -213,87 +183,36 @@ curriculum.
     <div class="container-fluid" id="service-container">
       <div class="row" id="banner-row">
         <div class="col-md-12 px-5" id="service-col2">
-          <!-- <img id="image-container" src="img/Hod Sir.jpg" class="img-fluid rounded mx-auto d-block i1" alt="..." width="390px" -->
-            <!-- style="border-radius: 2% !important; padding: 0px !important;" /> -->
-          <!-- <h3>Dr. Hemant Turkar</h3> -->
-          <!-- <p id="para" style="text-align: justify;"> 
-          Welcome to the SBJITMR Student Chapter of the Association for Computing Machinery (ACM)! 
-          I am pleased to welcome you all to the Department Of Emerging Technologies and I extend 
-          my warmest greetings to you all. True to our name, we represent the cutting edge of the 21st century. 
-          With specialized branches of CSE in Artificial Intelligence and  Machine Learning & Data Science, 
-          we are dedicated to continually enhancing the skill sets of our students. 
-          Through carefully designed programs and practical experiences, we ensure that our students are well-prepared 
-          to excel in their prospective professional journeys. At our department, we strive to integrate quality education 
-          with a focus on upcoming technologies, essential for placing competent students in the IT industry. Providing 
-          guidance and support, we aim to shape our students for success. But when we talk about education it also comprises 
-          extracurricular activities so, beyond academics, we recognized the importance of extracurricular activities in 
-          building confidence and preparing students for a bright future. 
-          Our department hosts frequent events such as “ACM-ICPC and Smart India Hackathon” that contribute to our integrated development 
-          program. In conclusion, we also focus on nurturing students socially. 
-          I emphasize my role in transforming students into both technically and socially competent individuals,
-           ready to open doors to success and a promising future. I invite all of you to collaborate with us in shaping tomorrow's world with 
-           today's youth. They will lead us to technological advancements to the greatest extent.      
-          </p> -->
-          
-        
         </div>
         
 
         <div class="col-md-6 px-5" id="service-col2">
-          <h3 style="text-align: left;">FDP Content</h3>
-          
+          <h3 style="text-align: left;font-size: 5vh;">FDP Content</h3>
+          <br>
+          <ui>
             <li>Applications of Artificial Intelligence</li>
             <li>Supervised & Unsupervised Learning</li>
             <li>Detailed study of CNN and RNN</li>
             <li>Data Analytics & Data Visualization</li>
             <li>Natural Language Processing</li>
-            <li>Transformer models: the future of natural
-              language processing</li>
-            <li>Application of AI in Healthcare &
-              Finance</li>
+            <li>Transformer models: the future of natural language processing</li>
+            <li>Application of AI in Healthcare & Finance</li>
+          </ui>
               <br>
               <h3 style="text-align: left; ">Registration Link<a href="https://forms.gle/ZW5b7rM6cCV2FxWx9" target="_blank">Click Here</a></h3>
 
         </div>
         <div class="col-md-6 px-5" id="service-col1">
-          <h3>Payment Details</h3>
-          <p>Payment has to be done Online using
-            below QR Code or UPI Id, Bank account number.</p>
-            <img src="img/QR.jpg" alt="QR" class="img-fluid d-block mx-auto">
-            <h3>UPI Id: vchauhan1406@oksbi</h3>
+          <h3 style="font-size: 5vh;">Payment Details</h3>
+          <p style="font-size: x-large;text-align: center;">Payment has to be done Online using below QR Code or UPI Id,
+            <br> Bank account number.</p>
+            <img src="img/QR.jpg" alt="QR" class="img-fluid rounded mx-auto d-block i1" alt="..." width="320px style="border-radius: 10% !important; padding: 0px !important;"" >
+            <h3> &nbsp; UPI Id: vchauhan1406@oksbi</h3>
             </div>
       </div>
     </div>
- 
-<!-- 
-<section id="service">
-  <div class="container-fluid" id="service-container">
-    <div class="row" id="banner-row">
-      <div class="col-md-12 px-5" id="service-col2"> -->
-        <!-- <img id="image-container" src="img/Hod Sir.jpg" class="img-fluid rounded mx-auto d-block i1" alt="..." width="390px" -->
-          <!-- style="border-radius: 2% !important; padding: 0px !important;" /> -->
-        <!-- <h3>Dr. Hemant Turkar</h3> -->
-        <!-- <p id="para" style="text-align: justify;"> 
-        Welcome to the SBJITMR Student Chapter of the Association for Computing Machinery (ACM)! 
-        I am pleased to welcome you all to the Department Of Emerging Technologies and I extend 
-        my warmest greetings to you all. True to our name, we represent the cutting edge of the 21st century. 
-        With specialized branches of CSE in Artificial Intelligence and  Machine Learning & Data Science, 
-        we are dedicated to continually enhancing the skill sets of our students. 
-        Through carefully designed programs and practical experiences, we ensure that our students are well-prepared 
-        to excel in their prospective professional journeys. At our department, we strive to integrate quality education 
-        with a focus on upcoming technologies, essential for placing competent students in the IT industry. Providing 
-        guidance and support, we aim to shape our students for success. But when we talk about education it also comprises 
-        extracurricular activities so, beyond academics, we recognized the importance of extracurricular activities in 
-        building confidence and preparing students for a bright future. 
-        Our department hosts frequent events such as “ACM-ICPC and Smart India Hackathon” that contribute to our integrated development 
-        program. In conclusion, we also focus on nurturing students socially. 
-        I emphasize my role in transforming students into both technically and socially competent individuals,
-         ready to open doors to success and a promising future. I invite all of you to collaborate with us in shaping tomorrow's world with 
-         today's youth. They will lead us to technological advancements to the greatest extent.      
-        </p> -->
-    
-
 </section>
+
 <!-- footer -->
 <section id="banner" style="color: white; background-color: #0b2147;">
   <div class="container-fluid" id="banner-container">

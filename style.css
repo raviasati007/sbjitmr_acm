@@ -1,3 +1,5 @@
+
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,9 +12,15 @@ html,body{
 
 .main-foot {
 	margin: auto;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
    
@@ -48,7 +56,7 @@ html,body{
 }
 
 .nav-img {
-	height: 80px;
+	height: 60px;
 }
 
 /* Banner */
@@ -112,19 +120,23 @@ html,body{
   
   @-webkit-keyframes up-down {
 	0% {
-	  transform: translateY(10px);
+	  -webkit-transform: translateY(10px);
+	          transform: translateY(10px);
 	}
 	100% {
-	  transform: translateY(-10px);
+	  -webkit-transform: translateY(-10px);
+	          transform: translateY(-10px);
 	}
   }
   
   @keyframes up-down {
 	0% {
-	  transform: translateY(10px);
+	  -webkit-transform: translateY(10px);
+	          transform: translateY(10px);
 	}
 	100% {
-	  transform: translateY(-10px);
+	  -webkit-transform: translateY(-10px);
+	          transform: translateY(-10px);
 	}
   }
 /* Banner */
@@ -136,20 +148,26 @@ html,body{
 }
 
 #banner1{
-	background-color: rgb(240, 240, 255);
+	background-color: rgb(255, 255, 255);
 }
 
 #banner-container2 {
 	padding-top: 60px;
 	padding-bottom: 80px;
 	color: #0a193d;
-	animation-name:fadeIn; 
-  animation-duration: 1s; 
-  animation-timing-function: ease-in;
-  animation-iteration-count: 1;
-  animation-delay: 1s;
-	animation-fill-mode: none;
-	background-image: url(img/hello.jpg);
+	-webkit-animation-name:fadeIn;
+	        animation-name:fadeIn; 
+  -webkit-animation-duration: 1s; 
+          animation-duration: 1s; 
+  -webkit-animation-timing-function: ease-in; 
+          animation-timing-function: ease-in;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+	-webkit-animation-fill-mode: none;
+	        animation-fill-mode: none;
+	/* background-image: url(img/hello.jpg); */
 }
 
 #banner-row img {
@@ -195,7 +213,7 @@ p {
 
 /* service */
 #service {
-	background-image: url(img/hello.jpg)!important;
+	/* background-image: url(img/hello.jpg)!important; */
 
 	padding-top: 80px;
 	padding-bottom: 50px;
@@ -234,6 +252,7 @@ p {
 .row1 {
 	display: -ms-flexbox;
 	/* IE10 */
+	display: -webkit-box;
 	display: flex;
 	-ms-flex-wrap: wrap;
 	/* IE10 */
@@ -245,7 +264,8 @@ p {
 .column1 {
 	-ms-flex: 25%;
 	/* IE10 */
-	flex: 25%;
+	-webkit-box-flex: 25%;
+	        flex: 25%;
 	max-width: 25%;
 	padding: 0 4px;
 }
@@ -260,7 +280,8 @@ p {
 @media screen and (max-width: 800px) {
 	.column1 {
 		-ms-flex: 50%;
-		flex: 50%;
+		-webkit-box-flex: 50%;
+		        flex: 50%;
 		max-width: 50%;
 	}
 }
@@ -269,7 +290,8 @@ p {
 @media screen and (max-width: 600px) {
 	.column1 {
 		-ms-flex: 100%;
-		flex: 100%;
+		-webkit-box-flex: 100%;
+		        flex: 100%;
 		max-width: 100%;
 	}
 	
@@ -374,18 +396,30 @@ p {
 	position: relative;
 	width: 100%;
 	height: 100vh;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 }
 .team-content{
 	width: 100%;
 	max-width: 1350px;
 	margin: 0 auto;
+	display: -ms-grid;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(150px, auto));
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	gap: 2rem;
 	text-align: center;
 	margin-top: 4rem;
@@ -405,6 +439,8 @@ p {
 	padding: 16px;
 	background: #33339a;
 	border-radius: 15px;
+	-webkit-transition: all .38s ease;
+	-o-transition: all .38s ease;
 	transition: all .38s ease;
 }
 .box h3{
@@ -425,13 +461,19 @@ p {
 	color: #fff;
 	font-size: 20px;
 	margin: 0 8px;
+	-webkit-transition: all .38s ease;
+	-o-transition: all .38s ease;
 	transition: all .38s ease;
 }
 .icons i:hover{
-	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	    -ms-transform: scale(1.2);
+	        transform: scale(1.2);
 }
 .box:hover{
-	transform: translateY(-10px);
+	-webkit-transform: translateY(-10px);
+	    -ms-transform: translateY(-10px);
+	        transform: translateY(-10px);
 	cursor: pointer;
 }
 @media(max-width: 1240px){
@@ -444,4 +486,3 @@ p {
 		font-size: 3.2rem;
 	}
 }
-
