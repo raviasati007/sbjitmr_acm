@@ -172,7 +172,7 @@ html,body{
 }
 
 #banner-row img {
-	max-width: 70%;
+	max-width: auto;
 	height: auto;
 	display: block;
 	padding-left: 30px;
@@ -413,7 +413,7 @@ p {
 }
 .team-content{
 	width: 100%;
-	max-width: 1350px;
+	max-width: 95%;
 	margin: 0 auto;
 	display: -ms-grid;
 	display: grid;
@@ -427,7 +427,7 @@ p {
 }
 .team-content img{
 	width: 100%;
-	height: auto;
+	height: 100%;
 	border-radius: 15px;
 	margin-bottom: 15px;
 }
@@ -479,7 +479,7 @@ p {
 }
 @media(max-width: 1240px){
 	.team{
-		width: 100%;
+		width: auto;
 		height: auto;
 		padding: 90px 2%;
 	}
