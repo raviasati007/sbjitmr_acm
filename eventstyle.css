@@ -80,7 +80,7 @@
   
   @media (max-width: 991px) {
 	#hero {
-	  height: auto;
+	  height: 100vh;
 	  text-align: center;
 	}
   
@@ -181,7 +181,7 @@
   }
   
   #banner-row img {
-	max-width: 70%;
+	max-width: auto;
 	height: auto;
 	display: block;
 	padding-left: 30px;
