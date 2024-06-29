@@ -7,13 +7,20 @@
   <meta name="viewport" content="width=device-width,
 				initial-scale=1" />
   <meta name="keywords" content = "ACM,SBJITMR,SBJITMR ACM Student Chapter,S. B. Jain Institute of Technology Management and Research Nagpur,Department of Emerging Technologies">
-  <link rel="icon" href="img/ACM_LOGO.png" />
+  <link rel="icon" href="img/acmlogo.png" />
   <title>ACM-SBJITMR</title>
  
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="img/acmlogo.png" rel="icon">
+  <link href="img/acmlogo.png" rel="apple-touch-icon">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css" />
@@ -63,322 +70,85 @@
       #image-container:hover:before {
         opacity: 1;
       }
-/*       
-   #service
-   {
-    background-image: url(img/hello.jpg);
+/* Container for the entire HOD's Desk section */
+#hod-desk {
+    padding: 10px;
+}
 
-   } */
-      
-    #para, #para1,#para3,#para4 {
-        overflow: hidden;
-        height: 145px;
+/* Title section */
+#hod-desk .section-title {
+    margin-bottom: 10px;
+}
+
+/* Container for the image and text */
+.content-container {
+    display: flex;           
+    flex-wrap: wrap;        
+    align-items: flex-start;
+}
+
+/* Image column settings */
+.image-column {
+    flex: 0 0 43%;         
+    margin-left: 30px;     
+}
+
+/* Image settings */
+.hod-image {
+    border-radius: 5%;      
+    max-width: 100%;        
+    display: block;       
+    margin-bottom: 30px;    
+}
+
+/* Heading below the image */
+.hod-heading {
+    font-family: inherit;   
+    text-align: center;     
+    font-size: 30px;        
+    margin-top: 20px;       
+    margin-bottom: 15px;    
+}
+
+/* Text column settings */
+.text-column {
+    flex: 1;                
+}
+
+/* Paragraph styles */
+.hod-message {
+    color: rgb(0, 0, 0);    
+    text-align: justify;   
+    font-size: 19px;       
+    margin-top: 0;          
+    margin-bottom: 0;       
+    padding: 0 15px;        
+    box-sizing: border-box; 
+    line-height: 1.5;      
+    font-family: 'Arial', sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 767px) {
+    /* Stack image and text vertically */
+    .image-column,
+    .text-column {
+        flex: 0 0 100%;    
+        margin: 0;          
+        text-align: center; 
     }
-    
-     #readMoreBtn,#readMoreBtn1,#readMoreBtn2,#readMoreBtn3 {
-        background-color: blue;
-        color: white;
-        text-overflow: hidden;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        font-size: 16px;
-        cursor: pointer;
-     }
+    .hod-image {
+        max-width: 90%;     
+        margin: 0 auto 20px; 
+    }
+    .hod-message {
+        text-indent: 0;      
+        text-align: left;    
+        padding: 15px;      
+    }
+}
 
 
-</style>
-
-<body>
-  <section id="navbar">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/">
-                <img src="img/ACM_LOGO.png" href="/index.html" target="_parent" class="nav-img" alt="" />
-                ACM-SBJITMR
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav m-auto">
-                    <li class="nav-item">
-                        <a class='nav-link active' href='/index.html' style="text-decoration: none; display: inline-block; padding: 9px 10px;">Home </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class='smooth_scrool' href='#banner1' style="text-decoration: none; display: inline-block; padding: 9px 10px;">About Us</a>
-                    </li>
-                    <li class="nav-item">
-
-                        <a class='nav-link' href="/Event.html" target="_self" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Events</a>
-
-                    </li>
-                    <li class="nav-item">
-                        <a class='nav-link' href='/clubs.html' style="text-decoration: none; display: inline-block; padding: 9px 10px;">Clubs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class='smooth_scrool' href='#team' style="text-decoration: none; display: inline-block; padding: 9px 9px;">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mailto:emergiconacm@sbjit.edu.in" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Contact Us</a>
-                    </li>
-                    
-                </ul>
-            </div>
-        </div>
-    </nav>
-</section>
-
-<!-- Bootstrap JS and Popper.js -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
-  <!-- banner -->
-
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 "
-          data-aos="  fade-up" data-aos-delay="200">
-         <h3 style="color: rgb(255, 255, 255);">SBJITMR ACM Student Chapter
-          </h3>
-          <p style="color:rgb(255, 255, 255); text-align: justify; text-justify: inter-word; text-overflow: hidden;font-size: 15px !important;" >
-            The Association for Computing Machinery (ACM) stands as a global scholarly society dedicated to the field of 
-				    computing, with a rich history dating back to its establishment in 1947. 
-				    Recognized as the world's largest scientific and educational computing society, 
-				    ACM has played a pivotal role in shaping the landscape of computing. 
-				    In alignment with this prestigious legacy, 
-				    ACM-S.B. Jain was founded in 2023 by the Department of Emerging Technologies at S. B. Jain Institute of Technolog, Management and Research, Nagpur 
-				    Since 2023, it has been jointly managed by the departments of Emerging Technologies AIML-AIDS.
-				    ACM-S.B. Jain serves as a dynamic professional community, committed to fostering awareness of the latest technological 
-				    advancements and providing educational insights. With a focus on nurturing aspiring change-makers, the association
-				    organizes events centered around cutting-edge technologies, contributing to the holistic development of students.
-				    Join us on a journey of technological exploration and educational excellence!
-          </p>
-          
-        </div>
-        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="img/hero-img.png" class="img-fluid animated" alt="">
-        </div>
-      </div>
-    </div>
-
-<br>
-<br>
-
-  </section>
-  <!-- Banner2 -->
-  <section id="banner1">
-    <br>
-    <br>
-
-      <div class="row" id="banner-row">
-        <div class="col-md-12 	padding-left: 166px;">
-          <img
-            src="img/sbj-removebg-preview-1.png"
-            alt="" style="width: 210px; text-align: center; display: block; margin-left: auto; margin-right: auto;"/>
-          <h3> S.B Jain Institute of Technology, Management and Research</h3>
-
-          <p style="color: rgb(0, 0, 0); 
-          text-align: justify; 
-          text-justify: inter-word; 
-          text-overflow: hidden; 
-          font-size: 20px !important; 
-          width: 90%; 
-          margin: 0 auto;  
-          padding: 20px; 
-          box-sizing: border-box; ">
-    The Association for Computing Machinery (ACM) stands as a global scholarly society dedicated to the field of computing, with a rich history dating back to its establishment in 1947. Recognized as the world's largest scientific and educational computing society, ACM has played a pivotal role in shaping the landscape of computing. In alignment with this prestigious legacy, ACM-S.B. Jain was founded in 2023 by the Department of Emerging Technologies at S. B. Jain Institute of Technology, Management, and Research. Since 2023, it has been jointly managed by the departments of Emerging Technologies AIML-AIDS. ACM-S.B. Jain serves as a dynamic professional community, committed to fostering awareness of the latest technological advancements and providing educational insights. With a focus on nurturing aspiring change-makers, the association organizes events centered around cutting-edge technologies, contributing to the holistic development of students. Join us on a journey of technological exploration and educational excellence!
-        </p>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- services -->
-  <section id="service">
-    <h1 id="head"  class="text-center"  style="font-size: 50px;"> From HOD's Desk</h1>
-    <div class="container-fluid" id="service-container">
-      <div class="row" id="banner-row">
-        <div class="col-md-12 px-8" id="service-col2">
-          <img id="image-container" src="img/Hod Sir.jpg" class="img-fluid rounded mx-auto d-block i1" alt="..." width="500px"
-            style="border-radius: 2% !important; padding: 0px !important;justify-content: flex-start;" />
-            <br>
-          <h3 style="font-size: 40px;">Dr. Hemant Turkar</h3>
-          <p id="para" style="color: rgb(0, 0, 0); 
-          text-align: justify; 
-          text-justify: inter-word; 
-          text-overflow: hidden; 
-          font-size: 20px !important; 
-          width: 98%;  
-          margin: 0 auto;
-          padding: 20px;  
-          box-sizing: border-box; "> 
-          Welcome to the SBJITMR Student Chapter of the Association for Computing Machinery (ACM).
-          I am pleased to welcome you all to the Department Of Emerging Technologies and I extend 
-          my warmest greetings to you all. True to our name, we represent the cutting edge of the 21st century. 
-          With specialized branches of CSE in Artificial Intelligence and  Machine Learning & Data Science, 
-          we are dedicated to continually enhancing the skill sets of our students. 
-          Through carefully designed programs and practical experiences, we ensure that our students are well-prepared 
-          to excel in their prospective professional journeys. At our department, we strive to integrate quality education 
-          with a focus on upcoming technologies, essential for placing competent students in the IT industry. Providing 
-          guidance and support, we aim to shape our students for success. But when we talk about education it also comprises 
-          extracurricular activities so, beyond academics, we recognized the importance of extracurricular activities in 
-          building confidence and preparing students for a bright future. 
-          Our department hosts frequent events such as “ACM-ICPC and Smart India Hackathon” that contribute to our integrated development 
-          program. In conclusion, we also focus on nurturing students socially. 
-          I emphasize my role in transforming students into both technically and socially competent individuals,
-           ready to open doors to success and a promising future. I invite all of you to collaborate with us in shaping tomorrow's world with 
-           today's youth. They will lead us to technological advancements to the greatest extent.      
-          </p>
-          
-          <button onclick="readMore()" id="readMoreBtn" style="position: absolute; left: 40px;">Read More</button>
-          <br>
-        </br>
-        <br>
-      </br>
-        </div>
-         
-
-        <h1 id="head"  class="text-center"  
-        style="text-align: center; font-size: 30px;color: black; text-align: center;"> Faculty Co-ordinator's Desk</h1>
-
-        <div class="col-md-6 px-3" id="service-col2">
-          <img id="image-container" src="Faculty/Ravi Sir.jpg" class="img-fluid rounded mx-auto d-block i1" alt="..."  width="210px"
-            style="border-radius: 10% !important; padding: 0px !important;" />
-            <br>
-          <h3 style="font-size: 30px;">Prof. Ravi V. Asati</h3>
-          <p  style="color: rgb(0, 0, 0); 
-          text-align: justify; 
-          text-justify: inter-word; 
-          text-overflow: hidden; 
-          font-size: 20px !important; 
-          width: 100%; 
-          margin: 0 auto; 
-          padding: 20px; 
-          box-sizing: border-box;"> 
-            Prof. Ravi V. Asati, an accomplished Assistant Professor, holds a Master's in ME(WCC), a Post Graduate Diploma in C-DAC (PGDAC), and a Bachelor's in Computer Technology (B.E in CT), accumulating over 15 years of valuable experience in academia. His expertise spans crucial areas such as Computer and Network Security, as well as Artificial Intelligence and Machine Learning (AIML). As an educator, Prof. Asati is dedicated to shaping the minds of aspiring technologists, utilizing innovative teaching methodologies and mentorship. Actively engaged in research, he contributes to advancements in cybersecurity and AI. For inquiries, mentorship, or further information, feel free to contact him at raviasati@sbjit.edu.in.
-            <br>
-            
-          </p>
-            <!-- <button onclick="readMore2()" style="position: absolute; left: 40px;" id="readMoreBtn1">Read More</button> -->
-          <br>
-          <br>
-          <br>
-        </div>
-       
-        <div class="col-md-6 px-3" id="service-col1">
-          <img id="image-container" src="Faculty/Yogesh Narekar Sir.jpg" class="img-fluid rounded mx-auto d-block i1" alt="..." width="250px"
-            style="border-radius: 10% !important; padding: 0px !important;" />
-            <br>
-          <h3 style="font-size: 30px;">Prof. Yogesh Narekar</h3>
-          <p  style="color: rgb(0, 0, 0); 
-          text-align: justify; 
-          text-justify: inter-word; 
-          text-overflow: hidden; 
-          font-size: 20px !important; 
-          width: 100%; 
-          margin: 0 auto; 
-          padding: 20px; 
-          box-sizing: border-box;"> 
-            Prof. Yogesh Narekar, a seasoned Assistant Professor with over 14 years of experience, holds an M.Tech in Computer Science and Engineering. Armed with a wealth of knowledge, he brings a comprehensive understanding of crucial areas such as Programming Languages, Data Structures, and Operating Systems. Prof. Narekar's commitment to academic excellence is reflected in his dedicated approach to the foundational aspects of computer science education. His passion for fostering learning environments goes beyond the classroom, making him an approachable resource for inquiries or to initiate enlightening discussions. For inquiries, mentorship, or further information, feel free to contact him at yogeshnarekar@sbjit.edu.in. 
-          </p>
-          
-            
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  <!-- Team -->
-
-	<section class="team" id="team">
-		<div class="center">
-			<h1 style="color: black;">ACM SBJITMR CORE TEAM</h1>
-		</div>
-
-		<div class="team-content">
-			<div class="box">
-				<img src="Team/PP.jpg">
-				<h3>Pranav Pimpalkar</h3>
-				<h5 style="color: white;">Chairperson</h5>
-				<div class="icons">
-					<a href="https://x.com/pranv_pimpalkar?t=B_Akv5cU4EnSf0Ka6bPfQQ&s=09" target="_blank"><i class="ri-twitter-fill"></i></a>
-					<a href="https://www.linkedin.com/in/pranav-pimpalkar-975389210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="ri-linkedin-fill"></i></a>
-				</div>
-			</div>
-
-			<div class="box">
-				<img src="Team/Sh.jpg">
-				<h3>Srushti Hanwate</h3>
-				<h5 style="color: white;">Vice-Chairperson</h5>
-				<div class="icons">
-					<a href="https://twitter.com/SrushtiHanwate?t=OsxXWk76eV_tFCbgMhqTYg&s=08" target="_blank"><i class="ri-twitter-fill"></i></a>
-					<a href="https://www.linkedin.com/in/srushti-h-2bb670242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"target="_blank"><i class="ri-linkedin-fill"></i></a>
-				</div>
-			</div>
-
-			<div class="box">
-				<img src="Team/Sm.jpg">
-				<h3>Sakshi Mantri</h3>
-				<h5 style="color: white;">Treasurer</h5>
-				<div class="icons">
-					<a href="https://x.com/Sakshi_Mantri_?t=EBt5jXJsSAgdsaLdyEoDCA&s=09" target="_blank"><i class="ri-twitter-fill"></i></a>
-					<a href="https://www.linkedin.com/in/sakshi-mantri-74b5b6269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"><i class="ri-linkedin-fill"></i></a>
-				</div>
-			</div>
-
-			<div class="box">
-				<img src="Team/Pn.jpg">
-				<h3>Prathmesh Naik</h3>
-				<h5 style="color: white;">Secretary</h5>
-				<div class="icons">
-					<a href="https://x.com/Prathme28636473?t=xd0NOJOMbb4r0H-LoH4scA&s=08"target="_blank"><i class="ri-twitter-fill"></i></a>
-					<a href="https://www.linkedin.com/in/prathmesh-naik-a48667249"target="_blank"><i class="ri-linkedin-fill"></i></a>
-				</div>
-			</div>
-
-      <div class="box">
-				<img src="Team/Sk.jpg">
-				<h3>Sharayu Kadu</h3>
-				<h5 style="color: white;">Membership Chair</h5>
-				<div class="icons">
-					<a href="https://x.com/SharayuKadu?t=ttgekLXkLA83qEBmxV0fHA&s=09" target="_blank"><i class="ri-twitter-fill"></i></a>
-					<a href="https://www.linkedin.com/in/sharayu-kadu-6a389523a" target="_blank"><i class="ri-linkedin-fill"></i></a>
-				</div>
-			</div>
-
-		</div>
-	</section>
-   <!-- <section id="product"> -->
-    
-    <!-- <div class="gallery">
-      <h3 class="myh1" style="text-align: center">
-        Photo <span class="myspan1">Gallery</span>
-      </h3>
-      <div class="container1" style="overflow-x: scroll; white-space: nowrap;">
-        <div class="box1" style="display: inline-block; padding: 30px;">
-          <img src="img/pic6.jpg" style="display: inline-block; width: 33.33%;" />
-          <img src="img/pic7.jpg" style="display: inline-block; width: 33.33%;" />
-          <img src="img/pic8.jpg" style="display: inline-block; width: 33.33%;" />
-          <img src="img/pic5.jpg" style="display: inline-block; width: 33.33%;" />
-          <img src="img/pic1.jpg" style="display: inline-block; width: 33.33%;" />
-          <img src="img/pic2.jpg" style="display: inline-block; width: 33.33%;" />
-          <img src="img/pic3.jpg" style="display: inline-block; width: 33.33%;" />
-        </div>
-      </div>
-    </div> 
-	</div> -->
-
-  <!-- Gallery -->
-  
-  <style>
-  
   /* Slideshow container */
   .slideshow-container {
   max-width: 700px;
@@ -416,13 +186,342 @@
   @media only screen and (max-width: 300px) {
     .text {font-size: 11px}
   }
-  </style>
+
+
+</style>
+
+<body>
+  <main id="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="img/acmlogo.png" href="/index.html" target="_parent" class="nav-img" alt="" />
+                SBJITMR
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                  <li class="nav-item">
+                    <a class='nav-link active' href="index.html" target="_self" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class='smooth_scrool' href="#banner1" style="text-decoration: none; display: inline-block; padding: 9px 10px;">About</a>
+                </li>
+                <li class="nav-item">
+
+                    <a class='nav-link' href="event.html" target="_self" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Events</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class='nav-link' href="clubs.html" target="_self" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Clubs</a>
+                </li>
+                <li class="nav-item">
+                    <a class='smooth_scrool' href="#team" style="text-decoration: none; display: inline-block; padding: 9px 9px;">Team</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto:emergiconacm@sbjit.edu.in" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Contact</a>
+                </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+</main>
+
+<!-- Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</main>
+  <!-- banner -->
+<!-- 
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1 "
+          data-aos="  fade-up" data-aos-delay="200">
+         <h3 style="color: rgb(255, 255, 255);">SBJITMR ACM Student Chapter
+          </h3>
+          <p style="color:rgb(255, 255, 255); text-align: justify;text-overflow: inherit;font-size: 15px;" >
+            The Association for Computing Machinery (ACM) stands as a global scholarly society dedicated to the field of 
+				    computing, with a rich history dating back to its establishment in 1947. 
+				    Recognized as the world's largest scientific and educational computing society, 
+				    ACM has played a pivotal role in shaping the landscape of computing. 
+				    In alignment with this prestigious legacy, 
+				    ACM-S.B. Jain was founded in 2023 by the Department of Emerging Technologies at S. B. Jain Institute of Technolog, Management and Research, Nagpur 
+				    Since 2023, it has been jointly managed by the departments of Emerging Technologies AIML-AIDS.
+				    ACM-S.B. Jain serves as a dynamic professional community, committed to fostering awareness of the latest technological 
+				    advancements and providing educational insights. With a focus on nurturing aspiring change-makers, the association
+				    organizes events centered around cutting-edge technologies, contributing to the holistic development of students.
+				    Join us on a journey of technological exploration and educational excellence!
+          </p>
+          
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <div>
+          <img style=" max-width: 70%; height: auto;float:center ;" src="img/acm_plain_logo.png" class="img-fluid animated" alt="">
+      </div>  
+      </div>
+      </div>
+    </div>
+
+<br>
+<br>
+
+  </section> -->
+
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
+          <h3 style="color: rgb(255, 255, 255);">SBJITMR ACM Student Chapter</h3>
+          <p style="color:rgb(255, 255, 255); text-align: justify; text-overflow: inherit; font-size: 15px;">
+            The Association for Computing Machinery (ACM) stands as a global scholarly society dedicated to the field of computing, with a rich history dating back to its establishment in 1947.
+            Recognized as the world's largest scientific and educational computing society, ACM has played a pivotal role in shaping the landscape of computing.
+            In alignment with this prestigious legacy, ACM-S.B. Jain was founded in 2023 by the Department of Emerging Technologies at S. B. Jain Institute of Technology, Management and Research, Nagpur.
+            Since 2023, it has been jointly managed by the departments of Emerging Technologies AIML-AIDS.
+            ACM-S.B. Jain serves as a dynamic professional community, committed to fostering awareness of the latest technological advancements and providing educational insights.
+            With a focus on nurturing aspiring change-makers, the association organizes events centered around cutting-edge technologies, contributing to the holistic development of students.
+            Join us on a journey of technological exploration and educational excellence!
+          </p>
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <div class="img-container">
+            <img src="img/acm_plain_logo.png" class="img-fluid animated" alt="ACM Logo">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Banner2 -->
+  <section id="banner1">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 20px;">
+      <div class="content" style="width: 100%; max-width: 600px;">
+          <img src="img/S._B._JAIN.jpg" alt="S.B. Jain Institute" style="width: 210px; display: block; margin: 0 auto;">
+          <h3 style="margin: 20px 0 0 0;">S.B Jain Institute of Technology, Management and Research</h3>
+      </div>
+  </div>
+
+          <p style="color: rgb(0, 0, 0); 
+          text-align: justify; 
+          text-justify: inter-word; 
+          text-overflow: hidden; 
+          font-size: 20px !important; 
+          width: 90%; 
+          margin: 0 auto;  
+          padding: 20px; 
+          box-sizing: border-box;">
+    The Association for Computing Machinery (ACM) stands as a global scholarly society dedicated to the field of computing, with a rich history dating back to its establishment in 1947. Recognized as the world's largest scientific and educational computing society, ACM has played a pivotal role in shaping the landscape of computing. In alignment with this prestigious legacy, ACM-S.B. Jain was founded in 2023 by the Department of Emerging Technologies at S. B. Jain Institute of Technology, Management, and Research. Since 2023, it has been jointly managed by the departments of Emerging Technologies AIML-AIDS. ACM-S.B. Jain serves as a dynamic professional community, committed to fostering awareness of the latest technological advancements and providing educational insights. With a focus on nurturing aspiring change-makers, the association organizes events centered around cutting-edge technologies, contributing to the holistic development of students. Join us on a journey of technological exploration and educational excellence!
+        </p>
+  </section>
+
+  <!-- services -->
+  <section id="hod-desk">
+    <div class="section-title">
+        <h2 style="text-align: center;">From HOD's Desk</h2>		
+    </div>    
+    <!-- <section class="content-section mt-3"> -->
+        <div class="content-container">
+            <div class="row">
+                <div class="image-column">
+                    <div class="image-wrapper">
+                        <img class="hod-image" alt="HOD Image" src="img/Hod Sir.jpg" />
+                        <h1 class="hod-heading">Dr. Hemant Turkar</h1> <!-- Replace with actual HOD's name -->
+
+                    </div>
+                </div>
+                <div class="text-column">
+                    <div class="text-wrapper">
+                        <p class="hod-message" style="text-align: justify;justify-content: center;">  
+                          <strong>Dear Students, Faculty, Staff, and Visitors,</strong> 
+                          <br><br>
+                          Welcome to the SBJITMR Student Chapter of the Association for Computing Machinery (ACM).
+                            I am pleased to welcome you all to the Department Of Emerging Technologies and I extend 
+                            my warmest greetings to you all. True to our name, we represent the cutting edge of the 21st century. 
+                            With specialized branches of CSE in Artificial Intelligence and Machine Learning & Data Science, 
+                            we are dedicated to continually enhancing the skill sets of our students. 
+                            Through carefully designed programs and practical experiences, we ensure that our students are well-prepared 
+                            to excel in their prospective professional journeys. At our department, we strive to integrate quality education 
+                            with a focus on upcoming technologies, essential for placing competent students in the IT industry. Providing 
+                            guidance and support, we aim to shape our students for success. But when we talk about education it also comprises 
+                            extracurricular activities so, beyond academics, we recognized the importance of extracurricular activities in 
+                            building confidence and preparing students for a bright future. 
+                            Our department hosts frequent events such as “ACM-ICPC and Smart India Hackathon” that contribute to our integrated development 
+                            program. In conclusion, we also focus on nurturing students socially. 
+                            I emphasize my role in transforming students into both technically and socially competent individuals,
+                            ready to open doors to success and a promising future. I invite all of you to collaborate with us in shaping tomorrow's world with 
+                            today's youth. They will lead us to technological advancements to the greatest extent.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</section>
+
+
+           <br>
+        <div class="section-title">
+          <div class="row" id="banner-row">
+            <div class="col-md-12 px-8" id="service-col2">
+          <h2 style="text-align: center;">Faculty Co-ordinator's Desk</h2>		
+        </div>   
+        <div class="col-md-6 px-3" id="service-col2">
+          <br>
+          <br>
+          <img id="image-container" src="Faculty/Ravi Sir.jpg" class="img-fluid rounded mx-auto d-block i1" alt="..."  width="210px"
+            style="border-radius: 10% !important; padding: 0px !important;" />
+            <br>
+          <h3 style="font-size: 30px;">Prof. Ravi V. Asati</h3>
+          <p style="color: rgb(0, 0, 0); 
+          text-align: justify; 
+          text-overflow: hidden; 
+          font-size: 20px !important; 
+          width: 100%; 
+          margin: 0 auto; 
+          padding: 30px; 
+          box-sizing: border-box;
+          word-wrap: break-word;">
+
+            Prof. Ravi V. Asati, an accomplished Assistant Professor, holds a Master's in ME(WCC), a Post Graduate Diploma in C-DAC (PGDAC), and a Bachelor's in Computer Technology (B.E in CT), accumulating over 15 years of valuable experience in academia. His expertise spans crucial areas such as Computer and Network Security, as well as Artificial Intelligence and Machine Learning (AIML). As an educator, Prof. Asati is dedicated to shaping the minds of aspiring technologists, utilizing innovative teaching methodologies and mentorship. Actively engaged in research, he contributes to advancements in cybersecurity and AI. <br> 
+            For inquiries, mentorship, or further information, feel free to contact him at raviasati@sbjit.edu.in.
+            <br>
+            
+          </p>
+          <br>
+          <br>
+          <br>
+        </div>
+       
+        <div class="col-md-6 px-3" id="service-col1">
+          <br>
+          <br>
+          <img id="image-container" src="Faculty/Yogesh Narekar Sir.jpg" class="img-fluid rounded mx-auto d-block i1" alt="..." width="250px"
+            style="border-radius: 10% !important; padding: 0px !important;" />
+            <br>
+          <h3 style="font-size: 30px;">Prof. Yogesh Narekar</h3>
+          <p  style="color: rgb(0, 0, 0); 
+          text-align: justify; 
+          text-justify: inter-word; 
+          text-overflow: hidden; 
+          font-size: 20px !important; 
+          width: 100%; 
+          margin: 0 auto; 
+          padding: 30px; 
+          box-sizing: border-box;"> 
+            Prof. Yogesh Narekar, a seasoned Assistant Professor with over 14 years of experience, holds an M.Tech in Computer Science and Engineering. Armed with a wealth of knowledge, he brings a comprehensive understanding of crucial areas such as Programming Languages, Data Structures, and Operating Systems. Prof. Narekar's commitment to academic excellence is reflected in his dedicated approach to the foundational aspects of computer science education. His passion for fostering learning environments goes beyond the classroom, making him an approachable resource for inquiries or to initiate enlightening discussions. <br> 
+            For inquiries, mentorship, or further information, feel free to contact him at yogeshnarekar@sbjit.edu.in. 
+          </p>  
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+   <!-- ======= Team Section ======= -->
+   <section id="team" class="team section-bg">
+    <div class="container" data-aos="fade-up">
+      <div class="section-title">
+        <h2>ACM CORE TEAM</h2>
+      </div>
+
+      <div class="row">
+
+        <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="100">
+          <div class="member d-flex align-items-start">
+            <div class="pic"><img src="Team/PP.jpg" class="img-fluid" alt=""></div>
+            <div class="member-info">
+              <h4>Pranav Pimpalkar</h4>
+              <span>Chairperson</span>
+              <p>Artificial Intelligence and Data Science</p>
+              <div class="social">
+                <a href="https://x.com/pranv_pimpalkar?t=B_Akv5cU4EnSf0Ka6bPfQQ&s=09"target="_blank"><i class="ri-twitter-fill"></i></a>
+                <!-- <a href=""><i class="ri-instagram-fill"></i></a> -->
+                <a href="https://www.linkedin.com/in/pranav-pimpalkar-975389210?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"> <i class="ri-linkedin-box-fill"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="member d-flex align-items-start">
+            <div class="pic"><img src="Team/Sh.jpg" class="img-fluid" alt=""></div>
+            <div class="member-info">
+              <h4>Srushti Hanwate</h4>
+              <span>Vice Chairperson</span>
+              <p>Artificial Intelligence and Data Science</p>
+              <div class="social">
+                <a href="https://twitter.com/SrushtiHanwate?t=OsxXWk76eV_tFCbgMhqTYg&s=08" target="_blank"><i class="ri-twitter-fill"></i></a>
+                <!-- <a href=""><i class="ri-instagram-fill"></i></a> -->
+                <a href="https://www.linkedin.com/in/srushti-h-2bb670242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"> <i class="ri-linkedin-box-fill"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="member d-flex align-items-start">
+            <div class="pic"><img src="Team/Sm.jpg" class="img-fluid" alt=""></div>
+            <div class="member-info">
+              <h4>Sakshi Mantri</h4>
+              <span>Treasurer</span>
+              <p>Artificial Intelligence and Machine Learning</p>
+              <div class="social">
+                <a href="https://x.com/Sakshi_Mantri_?t=EBt5jXJsSAgdsaLdyEoDCA&s=09" target="_blank"><i class="ri-twitter-fill"></i></a>
+                <!-- <a href=""><i class="ri-instagram-fill"></i></a> -->
+                <a href="https://www.linkedin.com/in/sakshi-mantri-74b5b6269?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"> <i class="ri-linkedin-box-fill"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
+          <div class="member d-flex align-items-start">
+            <div class="pic"><img src="Team/Pn.jpg" class="img-fluid" alt=""></div>
+            <div class="member-info">
+              <h4>Prathmesh Naik </h4>
+              <span>Secretary</span>
+              <p>Artificial Intelligence and Machine Learning</p>
+              <div class="social">
+                <a href="https://x.com/Prathme28636473?t=xd0NOJOMbb4r0H-LoH4scA&s=08" target="_blank"><i class="ri-twitter-fill"></i></a>
+                <!-- <a href=""><i class="ri-instagram-fill"></i></a> -->
+                <a href="https://www.linkedin.com/in/prathmesh-naik-a48667249" target="_blank"> <i class="ri-linkedin-box-fill"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mt-4" data-aos="zoom-in" data-aos-delay="400">
+          <div class="member d-flex align-items-start">
+            <div class="pic"><img src="Team/Sk.jpg" class="img-fluid" alt=""></div>
+            <div class="member-info">
+              <h4>Sharayu Kadu </h4>
+              <span>Membership Chair</span>
+              <p>Artificial Intelligence and Data Science</p>
+              <div class="social">
+                <a href="https://x.com/SharayuKadu?t=ttgekLXkLA83qEBmxV0fHA&s=09" target="_blank"><i class="ri-twitter-fill"></i></a>
+                <!-- <a href=""><i class="ri-instagram-fill"></i></a> -->
+                <a href="https://www.linkedin.com/in/sharayu-kadu-6a389523a" target="_blank"> <i class="ri-linkedin-box-fill"></i> </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Team Section -->
+<br>
+<br>
 
   <div class="gallery">
-  <h3 class="myh1" style="text-align: center; font-size: 3rem;color: black;
-	text-align: center;  " >
-    PHOTO <span class="myspan1">GALLERY</span>
-  </h3>
+    <div class="section-title">
+      <h2 style="text-align: center;">Photo Gallery</h2>
+      <br>
   <div class="slideshow-container">
   
   <div class="mySlides fade">
@@ -454,6 +553,16 @@
       <div class="numbertext"></div>
       <img src="img/pic6.jpg" style="width:100%">
     </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="img/pic7.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext"></div>
+      <img src="img/pic8.jpg" style="width:100%">
+    </div>
   
   </div>
   <br>
@@ -465,9 +574,144 @@
     <span class="dot"></span> 
     <span class="dot"></span> 
     <span class="dot"></span> 
+    <span class="dot"></span> 
+    <span class="dot"></span> 
   </div>
   
+  <!-- Gallery-END -->
+<br>
+<br>
+    
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>If you have any questions or queries a member of staff will always be happy to help. Feel free to contact us by telephone or email and we will be sure to get back to you as soon as possible.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="ri-map-pin-line flex-shrink-0"></i>              
+                <div>
+                  <h3 style="color: #37517e;justify-content: left;text-align: left;">Address</h3>
+                  <p style="text-align: left;word-spacing: 1px;">S. B. Jain Institute of Technology, Management & Research, Near Jain International School, Yerla Village, Kalmeshwar Road, Nagpur-441501</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="ri-phone-line flex-shrink-0"></i>
+                                <div>
+                  <h3  style="color: #37517e;justify-content: left;text-align: left;">Call Us</h3>
+                  <p>+1 5589 55488 55</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="ri-mail-line flex-shrink-0"></i>
+                                <div>
+                  <h3  style="color: #37517e;justify-content: left;text-align: left;">Email Us</h3>
+                  <p>emergiconacm@sbjit.edu.in</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe  frameborder="0" style="border:0; width: 100%; height: 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+
+            <div class="col-lg-7">
+              <iframe  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14877.891488523317!2d78.9731987!3d21.2130893!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4e97f454d37d5%3A0x32dca0144110c4a8!2sS.%20B.%20Jain%20Institute%20of%20Technology%2C%20Management%20%26%20Research%2C%20Nagpur!5e0!3m2!1sen!2sin!4v1719262529880!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 470px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </form>
+            </div>
+
+        </div>
+
+      </div>
+
+    </section>
+     <!-- End Contact Form -->
+      
+  <!-- footer -->
+  <footer id="footer">
+
+    <div class="footer-top" style="	background-color: #f3f5fa;">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3 style="color: #37517e;justify-content: left;text-align: left;" >SBJITMR ACM STUDENT CHAPTER</h3>
+            <p style="text-align: justify; text-indent: 0;">
+                Yerla Village <br>
+                Kalmeshwar Road, Nagpur- 441501<br>
+                Maharashtra, India <br><br>
+                <strong>Email:</strong> emergiconacm@sbjit.edu.in<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            
+          </div>
+
+          
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4 style="text-align: left;">Useful Links</h4>
+            <ul>
+              <li><i class="ri-arrow-right-s-line"></i> <a style="text-decoration: none;text-align: justify;"href="index.html" target="_self" >Home</a></li>
+              <li><i class="ri-arrow-right-s-line"></i> <a style="text-decoration: none;text-align: justify;" href='#banner1' >About </a></li>
+              <li><i class="ri-arrow-right-s-line"></i> <a style="text-decoration: none;text-align: justify;"  href="event.html" target="_self" >Events</a></li>
+              <li><i class="ri-arrow-right-s-line"></i> <a style="text-decoration: none;text-align: justify;" href="clubs.html" target="_self" >Clubs</a></li>
+              <li><i class="ri-arrow-right-s-line"></i> <a style="text-decoration: none;text-align: justify;"href="#team" >Team</a></li>
+            </ul>
+          </div>
+
+          <!-- <div class="col-lg-3 col-md-6 footer-links"> -->
+
+
+          <div class="col-lg-4 col-md-12 footer-links">
+            <h4>Our Social Networks</h4>
+            <p >Follow us on these social networks</p>
+            <div class="social-links mt-3">
+              <a style="text-decoration: none;" href="https://www.facebook.com/officialsbjain/" class="facebook"><i class="ri-facebook-fill"></i></a>
+              <a style="text-decoration: none;" href="https://www.instagram.com/sbjainofficial/" class="instagram"><i class="ri-instagram-line"></i></a>
+              <a style="text-decoration: none;" href="https://www.linkedin.com/school/officialsbjain/" class="linkedin"><i class="ri-linkedin-fill"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom clearfix">
+      <div class="copyright">
+        &copy; Copyright <strong><span>S. B. JAIN INSTITUTE OF TECHNOLOGY, MANAGEMENT & RESEARCH, NAGPUR</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <p ><a style="color: white;text-decoration: none;" href="https://www.linkedin.com/in/sohailansari01"> Designed and Developed by <strong>Sohail Ansari</strong></a></p>
+      </div>
+  </footer>
+
+
+  <!-- End Footer -->
   <script>
+  function readMore() {
+    var para = document.getElementById("para");
+    var btn = document.getElementById("readMoreBtn");
+  
+    if (para.style.height === "145px") {
+      para.style.height = "auto";
+      btn.innerHTML = "Read Less";
+    } else {
+      para.style.height = "145px";
+      btn.innerHTML = "Read More";
+    }
+  }
+  
   let slideIndex = 0;
   showSlides();
   
@@ -485,111 +729,9 @@
     }
     slides[slideIndex-1].style.display = "block";  
     dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 1900); // Change image every 2 seconds
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
   }
   </script>
-  
-  </body>
-  </html> 
-  
-  <!-- Gallery-END -->
-
-
-  <!-- footer -->
-  <section id="banner" style="color: white; background-color: #0b2147;">
-    <div class="container-fluid" id="banner-container">
-      <div class="row" id="banner-row">
-        <div class="col-md-4" id="footer-col1">
-      <h3>Location</h3>
-          <p>
-            S.B Jain Institute of Technology, Management and Research,
-            <br/>Yerla Village, Kalmeshwar Road, Nagpur- 441501<br />
-           State : Maharashtra<br />
-           Country : India
-          </p>
-        </div>
-        <div class="col-md-4" id="footer-col2">
-          <h3>Contact Us</h3>
-
-          <p>Email Us- emergiconacm@sbjit.edu.in </p>
-        </div>
-        <div class="col-md-4" id="footer-col2">
-          <h3>Design & Developed by</h3>
-
-          <p>Team ACM-SBJITMR</p>
-        </div>
-      </div>
-    </div>
-  </section>
-</section>
-
-   
-  <script>
-    // Get the preloader element
-    var preloader = document.getElementById("preloader");
-    var sohail=0;
-    // Hide the preloader after a delay of 3 seconds, or when the website content has loaded
-    setTimeout(function(){
-        preloader.style.display = "none";
-        sohail=1;
-    }, 2000);
-
-    // Hide the preloader after the website content has loaded
-    if (sohail==1) {
-    window.addEventListener("load", function () {
-      preloader.style.display = "none";
-    });
-  }
-  function readMore() {
-    var para = document.getElementById("para");
-    var btn = document.getElementById("readMoreBtn");
-  
-    if (para.style.height === "145px") {
-      para.style.height = "auto";
-      btn.innerHTML = "Read Less";
-    } else {
-      para.style.height = "145px";
-      btn.innerHTML = "Read More";
-    }
-  }
-  function readMore1() {
-    var para = document.getElementById("para1");
-    var btn = document.getElementById("readMoreBtn1");
-  
-    if (para.style.height === "145px") {
-      para.style.height = "auto";
-      btn.innerHTML = "Read Less";
-    } else {
-      para.style.height = "145px";
-      btn.innerHTML = "Read More";
-    }
-  }
-  function readMore2() {
-    var para = document.getElementById("para3");
-    var btn = document.getElementById("readMoreBtn1");
-  
-    if (para.style.height === "145px") {
-      para.style.height = "auto";
-      btn.innerHTML = "Read Less";
-    } else {
-      para.style.height = "145px";
-      btn.innerHTML = "Read More";
-    }
-  }
-  function readMore3() {
-    var para = document.getElementById("para4");
-    var btn = document.getElementById("readMoreBtn1");
-  
-    if (para.style.height === "145px") {
-      para.style.height = "auto";
-      btn.innerHTML = "Read Less";
-    } else {
-      para.style.height = "145px";
-      btn.innerHTML = "Read More";
-    }
-  }
-  </script>
-  
 </body>
 
 </html>

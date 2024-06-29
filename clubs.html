@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width,
 				initial-scale=1" />
 
-  <link rel="icon" href="img/ACM_LOGO.png" />
+  <link rel="icon" href="img/acmlogo.png" />
   <title>ACM-SBJITMR</title>
  
 
@@ -16,6 +16,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="eventstyle.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet" />
@@ -29,15 +30,145 @@
         height:800px;
       }
 
+  
+html {
+  background-color: #ffffff;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+  @media(min-width: 40rem) {
+    width: 50%;
+  }
+  @media(min-width: 56rem) {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size:contain;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  filter: saturate(200%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
+  &::before {
+    content: "";
+	  display: block;
+    padding-top: 56.25%; 
+  }
+  @media(min-width: 40rem) {
+    &::before {
+      padding-top: 66.6%; 
+    }
+  }
+}
+
+.card__image--sports {
+  background-image: url(Clubs/Sports.png);
+}
+
+.card__image--technical {
+  background-image: url(Clubs/TechnicalClub.png);
+}
+
+.card__image--management {
+  background-image: url(Clubs/Management.png);
+}
+
+.card__image--esports {
+  background-image: url(Clubs/EsportsClubs.jpg);
+}
+
+.card__image--cultural {
+  background-image: url(Clubs/Cultural.png);
+}
+
+.card__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  text-align: justify;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.btn {
+    display: inline-block;
+    outline: 0;
+    cursor: pointer;
+    border: none;
+    padding: 0 56px;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 7px;
+    background-color: #0070f3;
+    color: white; 
+    font-weight: 400;
+    font-size: 16px;
+    box-shadow: 0 4px 14px 0 rgb(0 118 255 / 39%);
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    background: rgba(0, 118, 255, 0.9);
+    box-shadow: 0 6px 20px rgb(0 118 255 / 23%);
+    color: white;
+}
+
+
 </style>
 
 <body>
-  <section id="navbar">
+  <main id="navbar">
     <nav class="navbar navbar-expand-lg navbar-dark bg-blue">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">
-                <img src="img/ACM_LOGO.png" href="/index.html" target="_parent" class="nav-img" alt="" />
-                ACM-SBJITMR
+                <img src="img/acmlogo.png" href="/index.html" target="_parent" class="nav-img" alt="" />
+                SBJITMR
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,159 +176,184 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav m-auto">
-                    <li class="nav-item">
-                        <a class='nav-link active' href='/' style="text-decoration: none; display: inline-block; padding: 9px 10px;">Home </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class='smooth_scrool' href='#banner1' style="text-decoration: none; display: inline-block; padding: 9px 10px;">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class='nav-link' href="Event.html" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Events</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class='nav-link' href='/clubs.html' style="text-decoration: none; display: inline-block; padding: 9px 10px;">Clubs</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class='smooth_scrool' href='index.html' style="text-decoration: none; display: inline-block; padding: 9px 9px;">Team</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="mailto:emergiconacm@sbjit.edu.in" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Contact Us</a>
-                    </li>
+                  <li class="nav-item">
+                    <a class='nav-link active'href="index.html" target="_self" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Home </a>
+                </li>
+                <li class="nav-item">
+                    <a class='smooth_scrool' href="#banner1" style="text-decoration: none; display: inline-block; padding: 9px 10px;">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class='nav-link' href="event.html" target="_self" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Events</a>
+                </li>
+                <li class="nav-item">
+                    <a class='nav-link'  href="clubs.html" target="_self" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Clubs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="mailto:emergiconacm@sbjit.edu.in" style="text-decoration: none; display: inline-block; padding: 9px 10px;">Contact</a>
+                </li>
                 </ul>
             </div>
         </div>
     </nav>
-</section>
+</main>
 
 <!-- Bootstrap JS and Popper.js -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<section id="banner1">
+<main id="banner1">
     <br>
     <br>
 
       <div class="row" id="banner-row">
         <div class="col-md-12 	padding-left: 166px;">
           <img
-            src="img/sbj-removebg-preview-1.png"
+            src="img/S._B._JAIN.jpg"
             alt="" style="width: 210px; text-align: center; display: block; margin-left: auto; margin-right: auto;"/>
           <h2 style="padding-top: 10px;
           text-align: center;">  &nbsp; &nbsp;Student Clubs</h2>
 
           <p style="color: rgb(0, 0, 0); 
           text-align: justify; 
-          text-justify: inter-word; 
+          justify-content: inherit;
           text-overflow: hidden; 
           font-size: 20px !important; 
           width: 90%; 
           margin: 0 auto;  
           padding: 20px; 
           box-sizing: border-box; ">
-   With an objective of help students to pursue their hobbies and interests and to bring people together the student clubs are created at the Institute. As a club member one knows about one’s self, one’s interests and one’s goals. Students can unravel their strengths like multitasking, organization skills, team Building skills, leadership skills and service mindedness. They can also add skills to their repertoire. The clubs also help in pursuing an old hobby. Networking opportunities being major benefit Club members develop bond among themselves which help in growing their careers. Association of students with clubs help in showcasing ones domain interest, balance between work and hobbies. Activities organized/participated as a club member looks good on the resume.
+   With an objective of help students to pursue their hobbies and interests and to bring people together the student clubs are created at the Institute. As a club member one knows about one's self, one's interests and one's goals. Students can unravel their strengths like multitasking, organization skills, team Building skills, leadership skills and service mindedness. They can also add skills to their repertoire. The clubs also help in pursuing an old hobby. Networking opportunities being major benefit Club members develop bond among themselves which help in growing their careers. Association of students with clubs help in showcasing ones domain interest, balance between work and hobbies. Activities organized/participated as a club member looks good on the resume.
         </p>
 
         </div>
       </div>
     </div>
-  </section>
-  
-  <h2 style="text-align: center;font-size: 4rem;">Clubs</h2>
+  </main>
+  <main>
+ 
+    <div class="section-title">
+      <h2 style="font-size: 50px;">Clubs
+</h2>
 
   <br>
-<section id="gallery">
+
+
+  <ul class="cards">
+    <li class="cards__item">
+      <div class="card">
+        <div class="card__image card__image--sports"></div>
+        <div class="card__content">
+          <div class="card__title">Sports Club</div>
+          <p class="card__text">The College Sports Club is a dynamic community fostering athleticism, teamwork, and leadership through a variety of competitive and recreational sports. We provide students with opportunities to excel in their favorite sports, build lasting friendships, and promote a healthy, active lifestyle. </p>
+          <br>
+          <button class="btn" onclick="this.style.color = 'white'">Know More</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards__item">
+      <div class="card">
+        <div class="card__image card__image--technical"></div>
+        <div class="card__content">
+          <div class="card__title">Technical Club</div>
+          <p class="card__text">The Technical Club empowers students to innovate and excel in cutting-edge technology and engineering projects. We offer hands-on experiences, workshops, and collaborative opportunities to turn ideas into impactful solutions.</p>
+          <br>
+          <button class="btn" onclick="this.style.color = 'white'">Know More</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards__item">
+      <div class="card">
+        <div class="card__image card__image--management"></div>
+        <div class="card__content">
+          <div class="card__title">Management Club</div>
+          <p class="card__text">The Management Club cultivates leadership and business acumen through interactive workshops, networking events, and real-world project experiences. We equip students with the skills and insights to excel in dynamic and competitive professional environments.</p>
+          <br>
+          <button class="btn" onclick="this.style.color = 'white'">Know More</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards__item">
+      <div class="card">
+        <div class="card__image card__image--esports"></div>
+        <div class="card__content">
+          <div class="card__title">Esports Club</div>
+          <p class="card__text">The Esports Club unites gaming enthusiasts to compete, collaborate, and thrive in the exciting world of competitive gaming. We provide a platform for skill development, team play, and strategic growth across various popular game titles.</p>
+          <br>
+          <button class="btn" onclick="this.style.color = 'white'">Know More</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards__item">
+      <div class="card">
+        <div class="card__image card__image--cultural"></div>
+        <div class="card__content">
+          <div class="card__title">Cultural Club</div>
+          <p class="card__text">The Cultural Club celebrates diversity and creativity through vibrant events, performances, and artistic expressions. We bring together students from all backgrounds to share, learn, and showcase the rich tapestry of global cultures.</p>
+          <br>
+          <button class="btn" onclick="this.style.color = 'white'">Know More</button>
+        </div>
+      </div>
+    </li>
+     
+    </main>
+
+ <!-- footer -->
+ <footer id="footer">
+
+  <div class="footer-top" style="	background-color: #f3f5fa;">
     <div class="container">
       <div class="row">
-      <div class="col-lg-4 mb-4">
-      <div class="card">
-        <img src="Clubs/Sports.png" alt="" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title" style="text-align: center;">Sports Clubs</h5>
-          <p class="card-text">To champion inclusivity and foster camaraderie through athletic endeavors, cultivating a dynamic sports community where all perspectives are valued and embraced.</p>
-         <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3 style="color: #37517e;justify-content: left;text-align: left;" >SBJITMR ACM STUDENT CHAPTER</h3>
+          <p style="text-align: justify; text-indent: 0;">
+              Yerla Village <br>
+              Kalmeshwar Road, Nagpur- 441501<br>
+              Maharashtra, India <br><br>
+              <strong>Email:</strong> emergiconacm@sbjit.edu.in<br>
+          </p>
         </div>
-       </div>
-      </div>
-    <div class="col-lg-4 mb-4">
-    <div class="card">
-        <img src="Clubs/Cultural.png" alt="" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title" style="text-align: center;">Cultural Clubs</h5>
-          <p class="card-text">To celebrate diversity and promote cultural understanding through artistic expression, creating a vibrant community where every voice is heard and cherished.</p>
-         <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          
         </div>
+
+        
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4 style="text-align: left;">Useful Links</h4>
+          <ul>
+            <li><i class="ri-arrow-right-s-line"></i> <a style="text-decoration: none;text-align: justify;"href="index.html" target="_self" >Home</a></li>
+            <li><i class="ri-arrow-right-s-line"></i> <a style="text-decoration: none;text-align: justify;" href='#banner1' >About </a></li>
+            <li><i class="ri-arrow-right-s-line"></i> <a style="text-decoration: none;text-align: justify;"  href="event.html" target="_self" >Events</a></li>
+            <li><i class="ri-arrow-right-s-line"></i> <a style="text-decoration: none;text-align: justify;" href="clubs.html" target="_self" >Clubs</a></li>
+            <!-- <li><i class="ri-arrow-right-s-line"></i> <a style="text-decoration: none;text-align: justify;"href="#team" >Team</a></li> -->
+          </ul>
         </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-      <div class="card">
-        <img src="Clubs/Management.png" alt="" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title"style="text-align: center;">Management Clubs</h5>
-          <p class="card-text">To cultivate tomorrow's leaders through innovative management practices, fostering a community dedicated to excellence, collaboration, and ethical decision-making.</p>
-         <a href="" class="btn btn-outline-success btn-sm">Read More</a>
+
+        <div class="col-lg-3 col-md-12 footer-links">
+
+
+        <!-- <div class="col-lg-4 col-md-12 footer-links"> -->
+          <h4 style="text-align: left;">Our Social Networks</h4>
+          <p style="text-align: left;">Follow us on these social networks</p>
+          <div class="social-links mt-3">
+            <a style="text-decoration: none;" href="https://www.facebook.com/officialsbjain/" class="facebook"><i class="ri-facebook-fill"></i></a>
+            <a style="text-decoration: none;" href="https://www.instagram.com/sbjainofficial/" class="instagram"><i class="ri-instagram-line"></i></a>
+            <a style="text-decoration: none;" href="https://www.linkedin.com/school/officialsbjain/" class="linkedin"><i class="ri-linkedin-fill"></i></a>
+          </div>
         </div>
-       </div>
       </div>
     </div>
   </div>
-  </section>
-  <section id="gallery">
-    <div class="container">
-      <div class="row">
-      <div class="col-lg-4 mb-4">
-      <div class="card">
-        <img src="Clubs/Technical Club.png" alt="" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title"style="text-align: center;">Technical Clubs</h5>
-          <p class="card-text">To advance technological prowess through collaborative excellence, fellowship, and inventive exploration, establishing a tech-centric community where enthusiasts flourish, pushing the limits and reshaping possibilities in digital domains.</p>
-         <a href="" class="btn btn-outline-success btn-sm">Read More</a>
-        </div>
-       </div>
-      </div>
-    <div class="col-lg-4 mb-4">
-    <div class="card">
-        <img src="Clubs/Esports Clubs.jpg" alt="" class="card-img-top">
-        <div class="card-body">
-          <h5 class="card-title" style="text-align: center;">Esports Clubs</h5>
-          <p class="card-text">To elevate gaming culture through competitive excellence, camaraderie, and innovation, forging a community where esports enthusiasts thrive, pushing boundaries and redefining what's possible in virtual arenas.</p>
-         <a href="" class="btn btn-outline-success btn-sm">Read More</a>
-        </div>
-        </div>
-      </div>
-      
-  </section>
 
-  <!-- footer -->
-  <section id="banner" style="color: white; background-color: #0b2147;">
-    <div class="container-fluid" id="banner-container">
-      <div class="row" id="banner-row">
-        <div class="col-md-4" id="footer-col1">
-      <h3>Location</h3>
-          <p>
-            S.B Jain Institute of Technology, Management and Research,
-            <br/>Yerla Village, Kalmeshwar Road, Nagpur- 441501<br />
-           State : Maharashtra<br />
-           Country : India
-          </p>
-        </div>
-        <div class="col-md-4" id="footer-col2">
-          <h3>Contact Us</h3>
-
-          <p>Email Us- emergiconacm@sbjit.edu.in </p>
-        </div>
-        <div class="col-md-4" id="footer-col2">
-          <h3>Design & Developed by</h3>
-
-          <p>Team ACM-SBJITMR</p>
-        </div>
-      </div>
+  <div class="container footer-bottom clearfix">
+    <div class="copyright">
+      &copy; Copyright <strong><span>S. B. JAIN INSTITUTE OF TECHNOLOGY, MANAGEMENT & RESEARCH, NAGPUR</span></strong>. All Rights Reserved
     </div>
-  </section>
-</section>
-
-  
-  
+    <div class="credits">
+      <p ><a style="color: white;text-decoration: none;" href="https://www.linkedin.com/in/sohailansari01"> Designed and Developed by <strong>Sohail Ansari</strong></a></p>
+    </div>
+</footer>
 </body>
-
 </html>
